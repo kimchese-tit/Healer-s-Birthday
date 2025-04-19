@@ -1,0 +1,128 @@
+body {
+    width: 100vw;
+    height: 100vh;
+  background-color: #A0DEFF ;
+  font-family: sans-serif;
+  color: white;
+  overflow: hidden;
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.main span {
+    display: block;
+    font-size: 35px;
+    font-weight: 600;
+    color:white;
+    letter-spacing: 0.03em;
+}
+
+.main span strong {
+    font-weight:600;
+    color: white;
+}
+
+.main .small {
+    display: block;
+    color: #ff9fbd;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.confetti {
+    width: 7px;
+    height: 12px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Balloon */
+.balloon {
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(253, 44, 47, 0.4);
+    animation: move-up 5s;
+    margin-left: 250px;
+}
+.balloon::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 150px;
+    background-color: white;
+    top: 110px;
+    left: 50px;
+}
+.balloon::after {
+    position: absolute;
+    content: '';
+    border-bottom: 12px solid rgb(255, 97, 97);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 109px;
+    left: 41px;
+}
+.balloon:nth-child(2) {
+    left: 120px;
+    background-color: rgba(48, 144, 255, 0.738);
+    animation-duration: 3s;
+}
+.balloon:nth-child(2)::after {
+    border-bottom: 12px solid rgb(52, 122, 252);
+}
+.balloon:nth-child(3) {
+    left: 230px;
+    background-color: rgba(255, 255, 0, 0.5);
+    animation-duration: 2s;
+}
+.balloon:nth-child(3)::after {
+    border-bottom: 12px solid yellow;
+}
+.balloon:nth-child(4) {
+    left: 340px;
+    background-color: rgba(0, 128, 0, 0.5);
+    animation-duration: 3s;
+}
+.balloon:nth-child(4)::after {
+    border-bottom: 12px solid green;
+}
+.balloon:nth-child(5) {
+    left: 460px;
+    background-color: rgba(255, 126, 182, 0.789);
+    animation-duration: 4s;
+}
+.balloon:nth-child(6) {
+    left: 580px;
+    background-color: rgba(252, 170, 76, 0.756);
+    animation-duration: 3s;
+}
+.balloon:nth-child(6)::after {
+    border-bottom: 12px solid orange;
+}
+.balloon:nth-child(7) {
+    left: 700px;
+    background-color: rgba(216, 116, 255, 0.73);
+    animation-duration: 5s;
+}
+.balloon:nth-child(8) {
+    left: 820px;
+    background-color: rgba(71, 212, 255, 0.721);
+    animation-duration: 2s;
+}
+
+@keyframes move-up {
+    0% {
+        top: 69%;
+    }
+    100% {
+        top: 0%;
+    }
+}
